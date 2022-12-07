@@ -19,16 +19,16 @@ import Greet from "./greet/Greet";
 describe("Greet", () => {
   test("Renders correctly", () => {
     render(<Greet />);
-    const textElement = screen.getByText("Hello");
+    const textElement = screen.getByText(/Hello/);
     expect(textElement).toBeInTheDocument();
   });
-  describe("Nested", () => {
-    test("Renders with a name", () => {
-      render(<Greet name={"Vishnu"} />);
-      const textElement = screen.getByText("Hello Vishnu");
-      expect(textElement).toBeInTheDocument();
-    });
-  });
+  // describe("Nested", () => {
+  //   test("Renders with a name", () => {
+  //     render(<Greet name={"Vishnu"} />);
+  //     const textElement = screen.getByText("Hello Vishnu");
+  //     expect(textElement).toBeInTheDocument();
+  //   });
+  // });
 });
 //test.only => jest only pickups this test to run
 //test.skip => just skips this test while running
